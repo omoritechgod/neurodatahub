@@ -1,0 +1,119 @@
+/* About Section Container */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 4rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    gap: 2rem;
+  }
+  
+  /* Image Section */
+  .about-image {
+    flex: 0 0 40%; /* 40% width for the image */
+    position: relative;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Text Section */
+  .about-text {
+    flex: 1; /* The rest of the space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    color: #102f5b;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Buttons */
+  .about-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-primary {
+    background-color: #102f5b;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #14cdc8;
+  }
+  
+  .btn-secondary {
+    border: 2px solid #102f5b;
+    color: #102f5b;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #102f5b;
+    color: #fff;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column; /* Stack image and text vertically */
+      gap: 1.5rem;
+      text-align: center;
+    }
+  
+    .about-image {
+      flex: none; /* Remove fixed width */
+      width: 100%; /* Full width */
+    }
+  
+    .about-text h2 {
+      font-size: 2rem; /* Slightly smaller heading */
+    }
+  
+    .about-text p {
+      font-size: 0.95rem; /* Adjust font size for readability */
+    }
+  
+    .about-buttons {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 1rem;
+    }
+  
+    .btn-primary,
+    .btn-secondary {
+      width: 100%; /* Buttons span the full width */
+    }
+  }
+  

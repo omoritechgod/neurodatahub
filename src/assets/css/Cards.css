@@ -1,0 +1,98 @@
+.cards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 32%;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  /* Add this to overlap the carousel */
+  margin-top: -50px; /* Adjust this value for desired overlap */
+  z-index: 5; /* Ensure it stays above the carousel */
+  position: relative;
+}
+
+.card {
+  background-color: rgb(159, 141, 208);
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 3rem 1.75rem;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  /* Add transition for smooth scaling */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 3px 3px 20px 3px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+}
+
+.card .card-up {
+  display: flex;
+  align-items: center;
+}
+
+.card .card-up .img-container {
+  border-radius: 100%;
+  background-color: #CFDBE2ff;
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .card-up .img-container img {
+  width: 100%;
+}
+
+.card h1 {
+  font: 1rem sans-serif;
+  font-weight: 700;
+  color: #102f5b;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 17px;
+  color: rgb(246, 241, 241);
+}
+
+.card-up {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    padding: 2rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards {
+    grid-auto-flow: row;
+    grid-auto-columns: 100%;
+    gap: 1rem;
+  }
+
+  .card {
+    grid-auto-flow: row;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  .card:hover {
+    transform: scale(1.02); /* Slightly smaller pop effect on mobile */
+  }
+}

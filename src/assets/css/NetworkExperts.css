@@ -1,0 +1,150 @@
+
+  /* Experts Section */
+  .experts-container {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #fff;
+  }
+  
+  .section-title {
+    color: #073362;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .experts-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .expert-card {
+    background: #f5f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .expert-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .expert-image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .expert-name {
+    font-size: 1.25rem;
+    color: #073362;
+    font-weight: 600;
+  }
+  
+  .expert-title {
+    font-size: 1rem;
+    color: #888;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .expert-icons a {
+    margin: 0 5px;
+    color: #073362;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .expert-icons a:hover {
+    color: #007bff;
+  }
+  
+  .read-more-button {
+    background: #073362;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .read-more-button:hover {
+    background: #0056b3;
+  }
+  
+  /* Advisory Board */
+  .advisory-board {
+    background: #f5f7fa;
+    padding: 3rem 1rem;
+  }
+  
+  .advisory-board .section-title {
+    margin-bottom: 2rem;
+  }
+  /* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #073362;
+  }
+  
+  .modal-title {
+    color: #888;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .modal-bio {
+    color: #444;
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+  

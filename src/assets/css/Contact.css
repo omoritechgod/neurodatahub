@@ -1,0 +1,68 @@
+/* Contact Section Container */
+.contact-section {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  .contact-section h1{
+    padding: 3rem 1rem;
+    font-size: 50px;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Individual Card */
+  .contact-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon Styling */
+  .contact-icon {
+    font-size: 3rem;
+    color: #14cdc8; /* Updated neurodatahub theme color */
+    margin-bottom: 1rem;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.5rem;
+    color: #102f5b;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contact-section h1{
+        padding: 3rem 1rem;
+        font-size: 30px;
+      }
+  }
+  
