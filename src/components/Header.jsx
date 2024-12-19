@@ -12,6 +12,7 @@ import {
   faClose,
   faSearch,
   faChevronDown,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Login from "./Login";
 import Signup from "./Signup";
@@ -45,7 +46,11 @@ const Header = () => {
         <Link to="/" className="header-logo">
           <img src={LogoWhite} alt="" />
         </Link>
-        <nav className={`desktopNav ${isScrolled ? "scrolledLink" : "header-nav"} md:hidden`}>
+        <nav
+          className={`desktopNav ${
+            isScrolled ? "scrolledLink" : "header-nav"
+          } md:hidden`}
+        >
           <Link to="/">Home</Link>
           <Link to="/About">About</Link>
           <div className="dropdown">
@@ -95,7 +100,11 @@ const Header = () => {
         />
       </div>
 
-      <div className={`absolute w-[100vw] h-[100vh] top-0 left-0 bg-[rgba(7,51,98,0.5)] ${navOpen ? "flex" : "hidden"}`}></div>
+      <div
+        className={`absolute w-[100vw] h-[100vh] top-0 left-0 bg-[rgba(7,51,98,0.5)] ${
+          navOpen ? "flex" : "hidden"
+        }`}
+      ></div>
 
       {/* Mobile Drop-Down Menu */}
       <nav
@@ -108,11 +117,22 @@ const Header = () => {
         <Link to="/">Home</Link>
         <Link to="/">About</Link>
         <div className="dropdown-mobile">
-          <button onClick={() => setServicesOpen(!servicesOpen)}>
-            Services <FontAwesomeIcon icon={faChevronDown} className={`chevron ${servicesOpen ? 'rotate' : ''}`} />
+          <button
+            onClick={() => {
+              setServicesOpen(!servicesOpen);
+              setEventsOpen(false);
+              setCommunityOpen(false);
+            }}
+            className=" text-base"
+          >
+            Services{" "}
+            <FontAwesomeIcon
+              icon={servicesOpen ? faChevronDown : faChevronRight}
+              className={`chevron ${servicesOpen ? "rotate" : ""} text-xs`}
+            />
           </button>
           {servicesOpen && (
-            <div className="dropdown-mobile-content">
+            <div className="dropdown-mobile-content ml-5 text-sm flex flex-col gap-2">
               <Link to="/data-repositories">Data Repositories</Link>
               <Link to="/learning-resources">Learning Resources</Link>
               <Link to="/research-collaborations">Research Collaborations</Link>
@@ -120,22 +140,44 @@ const Header = () => {
           )}
         </div>
         <div className="dropdown-mobile">
-          <button onClick={() => setEventsOpen(!eventsOpen)}>
-            Events <FontAwesomeIcon icon={faChevronDown} className={`chevron ${eventsOpen ? 'rotate' : ''}`} />
+          <button
+            onClick={() => {
+              setServicesOpen(false);
+              setEventsOpen(!eventsOpen);
+              setCommunityOpen(false);
+            }}
+            className=" text-base"
+          >
+            Events{" "}
+            <FontAwesomeIcon
+              icon={eventsOpen ? faChevronDown : faChevronRight}
+              className={`chevron ${eventsOpen ? "rotate" : ""} text-xs`}
+            />
           </button>
           {eventsOpen && (
-            <div className="dropdown-mobile-content">
+            <div className="dropdown-mobile-content ml-5 text-sm flex flex-col gap-2 text-[#18fcf4]">
               <Link to="/upcoming-events">Upcoming Events</Link>
               <Link to="/past-events">Past Events</Link>
             </div>
           )}
         </div>
         <div className="dropdown-mobile">
-          <button onClick={() => setCommunityOpen(!communityOpen)}>
-            Community <FontAwesomeIcon icon={faChevronDown} className={`chevron ${communityOpen ? 'rotate' : ''}`} />
+          <button
+            onClick={() => {
+              setServicesOpen(false);
+              setEventsOpen(false);
+              setCommunityOpen(!communityOpen);
+            }}
+            className=" text-base"
+          >
+            Community{" "}
+            <FontAwesomeIcon
+              icon={communityOpen ? faChevronDown : faChevronRight}
+              className={`chevron ${communityOpen ? "rotate" : ""} text-xs`}
+            />
           </button>
           {communityOpen && (
-            <div className="dropdown-mobile-content">
+            <div className="dropdown-mobile-content ml-5 text-sm flex flex-col gap-2">
               <Link to="/community">Community Resources</Link>
             </div>
           )}
